@@ -1,0 +1,64 @@
+name: System Bot
+
+# Saatler UTC. Türkiye = UTC+3.
+on:
+  schedule:
+    - cron: "20,50 7-14 * * 1-5"   # seans içi kontrol: TR 10:20 - 17:50, 30 dakikada bir
+    - cron: "40 15 * * 1-5"        # gün sonu: TR 18:40
+    - cron: "10 17 * * 1-5"        # gün sonu yedek: TR 20:10 (ilki çalıştıysa bir şey yapmaz)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Ne çalışsın?"
+        type: choice
+        options: [backtest, eod, monitor, telegram]
+        default: backtest
+
+permissions:
+  contents: write
+
+concurrency:
+  group: system-bot
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Kurulum
+        run: pip install -r requirements.txt
+
+      - name: Çalıştır
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          MODE="${{ inputs.mode }}"
+          if [ -z "$MODE" ]; then
+            case "${{ github.event.schedule }}" in
+              "20,50 7-14 * * 1-5") MODE=monitor ;;
+              *) MODE=eod ;;
+            esac
+          fi
+          echo "MODE=$MODE" >> "$GITHUB_ENV"
+          python run.py "$MODE"
+
+      - name: Durumu kaydet
+        if: always()
+        run: |
+          git config user.name "system-bot"
+          git config user.email "system-bot@users.noreply.github.com"
+          git add state docs
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "System Bot: ${MODE:-run} $(date -u +%F_%H%M)"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1

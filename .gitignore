@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+state/demo*.json
+state/demo_docs/
+*.tmp
