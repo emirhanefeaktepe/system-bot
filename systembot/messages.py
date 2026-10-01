@@ -81,6 +81,9 @@ def eod_message(pf: Portfolio, res: dict, news_map: dict, comment: str | None, w
             out.append(f"• {esc(p['ticker'])} ({BY_KEY[p['strategy']].horizon}) {tl(last)} · {pct(ch)} · "
                        f"stop {tl(p['stop'])}{tgt} · {p['days_held']}/{p['max_days']} gün")
 
+    if not res.get("market_up", True):
+        out.append("\n🛑 <b>Piyasa filtresi açık:</b> BIST 30, 200 günlük ortalamasının altında. "
+                   "Yeni sanal alım yapılmıyor; açık pozisyonlar kendi kurallarıyla yönetiliyor.")
     if res["queued"]:
         out.append("\n<b>Yarın açılışta sanal alım</b>")
         for s in res["queued"]:
@@ -125,7 +128,7 @@ def weekly_message(pf: Portfolio) -> str:
     return "\n".join(out)
 
 
-def backtest_message(bt: dict) -> str:
+def backtest_message(bt: dict, prev: dict | None = None) -> str:
     out = [f"<b>Geçmiş test {bt['start']} → {bt['end']}</b>",
            f"Toplam: {pct(bt['total_return_pct'])} · en büyük düşüş {pct(bt['total_max_dd_pct'])}"]
     if bt.get("benchmark_pct") is not None:
@@ -135,5 +138,9 @@ def backtest_message(bt: dict) -> str:
         wr = f"%{r['win_rate']:.0f}" if r["win_rate"] is not None else "—"
         out.append(f"{r['horizon']} ({r['name']}): {pct(r['return_pct'])}, düşüş {pct(r['max_dd_pct'])}, "
                    f"{r['trades']} işlem, kazanma {wr}, ort. {pct(r['avg_trade_pct'], 2)}")
+    if prev:
+        out.append(f"\nÖnceki sürüm: toplam {pct(prev['total_return_pct'])}, en büyük düşüş {pct(prev['total_max_dd_pct'])}")
+    if bt.get("market_filter"):
+        out.append(f"\nPiyasa filtresi: günlerin %{bt.get('blocked_pct', 0)}'inde yeni alım yapılmadı.")
     out.append("\n<i>Geçmiş performans geleceği garanti etmez. Komisyon 0, kayma %0,1 varsayıldı.</i>")
     return "\n".join(out)

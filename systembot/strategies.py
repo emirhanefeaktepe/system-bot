@@ -7,6 +7,8 @@ from dataclasses import asdict, dataclass
 
 import pandas as pd
 
+import config
+
 
 @dataclass
 class Signal:
@@ -126,8 +128,9 @@ class LongTrend(Strategy):
         return "Fiyat 100 günlük ortalamanın altına indi" if ok(row.sma100) and row.close < row.sma100 else None
 
 
-STRATEGIES: list[Strategy] = [ShortBounce(), Breakout(), Pullback(), Momentum(), LongTrend()]
-BY_KEY = {s.key: s for s in STRATEGIES}
+ALL_STRATEGIES: list[Strategy] = [ShortBounce(), Breakout(), Pullback(), Momentum(), LongTrend()]
+STRATEGIES: list[Strategy] = [s for s in ALL_STRATEGIES if s.key in config.ENABLED_STRATEGIES]
+BY_KEY = {s.key: s for s in ALL_STRATEGIES}
 
 
 def scan(frames: dict, ranks: dict, date: pd.Timestamp) -> dict[str, list[Signal]]:

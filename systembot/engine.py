@@ -8,6 +8,22 @@ from .portfolio import Portfolio
 from .strategies import STRATEGIES, scan
 
 
+def market_regime(bench: pd.DataFrame | None) -> pd.Series | None:
+    """Her gün için: BIST 30, kendi uzun ortalamasının üzerinde mi? (veri yoksa filtre uygulanmaz)"""
+    if not config.MARKET_FILTER or bench is None or bench.empty:
+        return None
+    c = bench["close"]
+    ma = c.rolling(config.MARKET_FILTER_MA).mean()
+    return (c > ma) | ma.isna()
+
+
+def market_ok(regime: pd.Series | None, d: pd.Timestamp) -> bool:
+    if regime is None:
+        return True
+    r = regime.loc[:d]
+    return bool(r.iloc[-1]) if len(r) else True
+
+
 def _closes(frames: dict, d: pd.Timestamp) -> dict[str, float]:
     return {t: float(f.at[d, "close"]) for t, f in frames.items() if d in f.index}
 
@@ -17,6 +33,8 @@ def _closes(frames: dict, d: pd.Timestamp) -> dict[str, float]:
 def backtest(frames: dict, ranks: dict, bench: pd.DataFrame | None = None, warmup: int = 130) -> dict:
     dates = sorted(set().union(*[f.index for f in frames.values()]))
     pf = Portfolio()
+    regime = market_regime(bench)
+    blocked_days = 0
     curve = []
     for i, d in enumerate(dates):
         if i < warmup:
@@ -44,15 +62,24 @@ def backtest(frames: dict, ranks: dict, bench: pd.DataFrame | None = None, warmu
             why = pf.close_exit(p, r)
             if why:
                 pf.close(p, float(r.close), ds, why)
-        # 4) kapanışta tarama, ertesi gün için emir
-        for key, sigs in scan(frames, ranks, d).items():
+        # 4) kapanışta tarama, ertesi gün için emir (piyasa filtresi izin veriyorsa)
+        if not market_ok(regime, d):
+            blocked_days += 1
+            sigs_today = {}
+        else:
+            sigs_today = scan(frames, ranks, d)
+        for key, sigs in sigs_today.items():
             for s in sigs:
                 if pf.slots_free(key) <= 0:
                     break
                 pf.queue(s, ds, prices)
         curve.append({"date": ds, "total": pf.equity(prices),
                       **{s.key: pf.sleeve_equity(s.key, prices) for s in STRATEGIES}})
-    return summarize(pf, curve, bench)
+    out = summarize(pf, curve, bench)
+    if out:
+        out["market_filter"] = regime is not None
+        out["blocked_pct"] = round(blocked_days / max(len(curve), 1) * 100)
+    return out
 
 
 def _max_dd(values: list[float]) -> float:
@@ -156,8 +183,9 @@ def end_of_day(pf: Portfolio, frames: dict, ranks: dict, today: str,
         if why:
             closed.append(pf.close(p, float(r.close), today, why))
     signals = scan(frames, ranks, d)
+    market_up = market_ok(market_regime(bench), d)
     queued = []
-    for key, sigs in signals.items():
+    for key, sigs in (signals.items() if market_up else []):
         for s in sigs:
             if pf.slots_free(key) <= 0:
                 break
@@ -175,4 +203,5 @@ def end_of_day(pf: Portfolio, frames: dict, ranks: dict, today: str,
     if bench_close:
         snap["bench"] = bench_close
     pf.history = [h for h in pf.history if h["date"] != today] + [snap]
-    return {"closed": closed, "signals": signals, "queued": queued, "prices": prices, "snap": snap}
+    return {"closed": closed, "signals": signals, "queued": queued, "prices": prices, "snap": snap,
+            "market_up": market_up}

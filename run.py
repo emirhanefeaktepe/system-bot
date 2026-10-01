@@ -96,7 +96,13 @@ def cmd_backtest(a):
     os.makedirs("state", exist_ok=True)
     with open(a.bt_file, "w", encoding="utf-8") as f:
         json.dump(bt, f, ensure_ascii=False, indent=1)
-    send_telegram(messages.backtest_message(bt), a.dry)
+    prev = None
+    try:
+        with open("state/backtest_v1.json", encoding="utf-8") as f:
+            prev = json.load(f)
+    except Exception:
+        pass
+    send_telegram(messages.backtest_message(bt, None if a.demo else prev), a.dry)
     report.write(Portfolio.load(a.state), None, bt, a.docs)
 
 

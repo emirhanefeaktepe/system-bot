@@ -16,9 +16,12 @@ işe yaradığını risksiz şekilde ölçmektir. Yatırım tavsiyesi değildir.
 
 Veriler Yahoo Finance'ten gelir ve yaklaşık 15 dakika gecikmelidir. Saniyelik veri yoktur.
 
-## Beş vade, beş strateji
+## Vadeler ve stratejiler
 
-Para 5 eşit bölmeye ayrılır (her biri 1.000 TL). Her strateji kendi bölmesiyle işlem yapar.
+**Güncel durum:** 1 haftalık strateji kapalı (2024-2026 testinde zarar ettirdi). Para açık 4 stratejiye bölünür.
+**Piyasa filtresi:** BIST 30 kendi 200 günlük ortalamasının altındayken yeni sanal alım yapılmaz. Açık pozisyonlar kendi kurallarıyla yönetilmeye devam eder. İkisi de `config.py` içinden açılıp kapatılabilir.
+
+Her strateji kendi bölmesiyle işlem yapar.
 Böylece hangi vadenin işe yaradığı ayrı ayrı görülür.
 
 | Vade | Strateji | Alım kuralı | Çıkış |
