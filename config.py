@@ -24,7 +24,7 @@ RISK_PER_TRADE = 0.05       # stop olunursa stratejinin parasının en fazla %5'
 # h5 = 1 hafta, h10 = 10 gün, h20 = 20 gün, h50 = 50 gün, h100 = 100 gün
 # h5 kapatıldı: 2024-2026 geçmiş testinde zarar ettirdi (-%13,6).
 ENABLED_STRATEGIES = ["h10", "h20", "h50", "h100"]
-MARKET_FILTER = True        # BIST 30 kendi ortalamasının altındaysa yeni alım yapma
+MARKET_FILTER = False       # denendi: 2024-2026 testinde sonucu kötüleştirdi (+%20,8 → +%15,9), kapalı
 MARKET_FILTER_MA = 200      # gün
 
 # Veri

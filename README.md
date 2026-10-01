@@ -19,7 +19,7 @@ Veriler Yahoo Finance'ten gelir ve yaklaşık 15 dakika gecikmelidir. Saniyelik 
 ## Vadeler ve stratejiler
 
 **Güncel durum:** 1 haftalık strateji kapalı (2024-2026 testinde zarar ettirdi). Para açık 4 stratejiye bölünür.
-**Piyasa filtresi:** BIST 30 kendi 200 günlük ortalamasının altındayken yeni sanal alım yapılmaz. Açık pozisyonlar kendi kurallarıyla yönetilmeye devam eder. İkisi de `config.py` içinden açılıp kapatılabilir.
+**Piyasa filtresi (kapalı):** BIST 30 kendi 200 günlük ortalamasının altındayken yeni alım yapmama kuralı denendi, 2024-2026 testinde sonucu kötüleştirdiği için kapatıldı. Açık pozisyonlar kendi kurallarıyla yönetilmeye devam eder. İkisi de `config.py` içinden açılıp kapatılabilir.
 
 Her strateji kendi bölmesiyle işlem yapar.
 Böylece hangi vadenin işe yaradığı ayrı ayrı görülür.
