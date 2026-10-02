@@ -1,6 +1,6 @@
 # System Bot · BIST hayali portföy sistemi
 
-System Bot, Borsa İstanbul'da BIST 30 hisselerini tarayan, 5.000 TL hayali parayla
+System Bot, Borsa İstanbul'da BIST 30 hisselerini tarayan, 10.000 TL hayali parayla
 kendi kurallarına göre sanal alım-satım yapan ve her şeyi Telegram'dan bildiren bir sistemdir.
 
 Gerçek para kullanmaz, aracı kuruma bağlanmaz. Amacı, hangi kuralların gerçekten
@@ -75,4 +75,4 @@ python run.py eod --dry               # gerçek veriyle gün sonu, ekrana yazar
 - Veri 15 dakika gecikmeli ve ücretsiz kaynaktan. Yahoo bazen sunucuları sınırlayabilir; o gün çalışma atlanır.
 - GitHub zamanlanmış işleri birkaç dakika geç başlatabilir.
 - Geçmiş testte iyi görünen kural gelecekte de iyi çalışmayabilir. En az 20-30 sanal işlem birikmeden sonuca güvenme.
-- 5.000 TL beşe bölündüğünde pahalı hisselerden ancak 1-2 lot alınabilir; bütçe yetmeyen sinyal atlanır.
+- 10.000 TL dört stratejiye bölünür (her biri 2.500 TL); pahalı hisselerden az lot alınabilir, bütçe yetmeyen sinyal atlanır.

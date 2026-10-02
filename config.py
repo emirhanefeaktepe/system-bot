@@ -13,7 +13,7 @@ TICKERS = [
 BENCHMARK = "XU030"
 
 # Hayali portföy
-CAPITAL = 5000.0            # TL, açık stratejilere eşit bölünür (4 strateji: her biri 1.250 TL)
+CAPITAL = 10000.0           # TL, açık stratejilere eşit bölünür (4 strateji: her biri 2.500 TL)
 COMMISSION_RATE = 0.0       # Midas BIST komisyonsuz
 SLIPPAGE = 0.001            # alış ve satışta %0,1 fiyat kayması varsayımı
 MAX_POS_PER_SLEEVE = 2      # her stratejide aynı anda en fazla 2 pozisyon
