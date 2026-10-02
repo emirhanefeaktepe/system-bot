@@ -85,7 +85,7 @@ def eod_message(pf: Portfolio, res: dict, news_map: dict, comment: str | None, w
         out.append("\n🛑 <b>Piyasa filtresi açık:</b> BIST 30, 200 günlük ortalamasının altında. "
                    "Yeni sanal alım yapılmıyor; açık pozisyonlar kendi kurallarıyla yönetiliyor.")
     if res["queued"]:
-        out.append("\n<b>Yarın açılışta sanal alım</b>")
+        out.append("\n<b>Sonraki seans açılışında sanal alım</b>")
         for s in res["queued"]:
             tgt = f" · hedef {tl(s.target)}" if s.target else ""
             out.append(f"• <b>{esc(s.ticker)}</b> ({BY_KEY[s.strategy].horizon}) ~{tl(s.price)} · stop {tl(s.stop)}{tgt}\n"
