@@ -3,56 +3,68 @@
  "cash": {
   "h10": 2500.0,
   "h20": 2500.0,
-  "h50": 2500.0,
-  "h100": 2500.0
+  "h50": 493.4955000000002,
+  "h100": 1536.0570319137578
  },
- "positions": [],
- "pending": [
+ "positions": [
   {
+   "id": "8f9e5970",
    "ticker": "TUPRS",
    "strategy": "h50",
-   "price": 377.0,
-   "stop": 326.96,
+   "entry_date": "2026-10-05",
+   "entry_price": 385.385,
+   "lots": 2,
+   "cost": 770.77,
+   "stop": 335.34,
    "target": null,
    "max_days": 50,
-   "score": 52.385,
-   "reason": "3 aylık getiri %52.4, BIST 30'da 1. sırada",
-   "signal_date": "2026-10-02"
+   "days_held": 0,
+   "reason": "3 aylık getiri %52.4, BIST 30'da 1. sırada"
   },
   {
+   "id": "2f346326",
    "ticker": "BIMAS",
    "strategy": "h50",
-   "price": 414.0,
-   "stop": 376.82,
+   "entry_date": "2026-10-05",
+   "entry_price": 411.9115,
+   "lots": 3,
+   "cost": 1235.73,
+   "stop": 374.73,
    "target": null,
    "max_days": 50,
-   "score": 11.59,
-   "reason": "3 aylık getiri %11.6, BIST 30'da 2. sırada",
-   "signal_date": "2026-10-02"
+   "days_held": 0,
+   "reason": "3 aylık getiri %11.6, BIST 30'da 2. sırada"
   },
   {
+   "id": "70b1fc62",
    "ticker": "TUPRS",
    "strategy": "h100",
-   "price": 377.0,
-   "stop": 310.27,
+   "entry_date": "2026-10-05",
+   "entry_price": 385.385,
+   "lots": 1,
+   "cost": 385.38,
+   "stop": 318.65,
    "target": null,
    "max_days": 100,
-   "score": 47.7,
-   "reason": "6 aylık getiri %47.7, BIST 30'da 1. sırada",
-   "signal_date": "2026-10-02"
+   "days_held": 0,
+   "reason": "6 aylık getiri %47.7, BIST 30'da 1. sırada"
   },
   {
+   "id": "4b175d8f",
    "ticker": "KRDMD",
    "strategy": "h100",
-   "price": 43.279998779296875,
-   "stop": 35.24,
+   "entry_date": "2026-10-05",
+   "entry_price": 44.5045,
+   "lots": 13,
+   "cost": 578.56,
+   "stop": 36.46,
    "target": null,
    "max_days": 100,
-   "score": 35.674,
-   "reason": "6 aylık getiri %35.7, BIST 30'da 2. sırada",
-   "signal_date": "2026-10-02"
+   "days_held": 0,
+   "reason": "6 aylık getiri %35.7, BIST 30'da 2. sırada"
   }
  ],
+ "pending": [],
  "closed": [],
  "history": [
   {
