@@ -18,7 +18,7 @@
    "stop": 335.34,
    "target": null,
    "max_days": 50,
-   "days_held": 3,
+   "days_held": 4,
    "reason": "3 aylık getiri %52.4, BIST 30'da 1. sırada"
   },
   {
@@ -32,7 +32,7 @@
    "stop": 318.65,
    "target": null,
    "max_days": 100,
-   "days_held": 3,
+   "days_held": 4,
    "reason": "6 aylık getiri %47.7, BIST 30'da 1. sırada"
   },
   {
@@ -46,7 +46,7 @@
    "stop": 36.46,
    "target": null,
    "max_days": 100,
-   "days_held": 3,
+   "days_held": 4,
    "reason": "6 aylık getiri %35.7, BIST 30'da 2. sırada"
   },
   {
@@ -60,7 +60,7 @@
    "stop": 29.0,
    "target": null,
    "max_days": 50,
-   "days_held": 0,
+   "days_held": 1,
    "reason": "3 aylık getiri %9.3, BIST 30'da 4. sırada"
   }
  ],
@@ -122,17 +122,24 @@
    "h50": 2434.56,
    "h100": 2473.77,
    "bench": 15013.830078125
+  },
+  {
+   "date": "2026-10-08",
+   "total": 9958.5,
+   "h10": 2500.0,
+   "h20": 2500.0,
+   "h50": 2470.93,
+   "h100": 2487.57,
+   "bench": 15137.5703125
   }
  ],
- "alerts": {
-  "TUPRS:+": "2026-10-08"
- },
+ "alerts": {},
  "meta": {
   "bench_start": {
    "date": "2026-10-02",
    "close": 15205.3896484375
   },
   "start_date": "2026-10-02",
-  "last_eod": "2026-10-07"
+  "last_eod": "2026-10-08"
  }
 }
