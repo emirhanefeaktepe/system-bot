@@ -3,7 +3,7 @@
  "cash": {
   "h10": 2500.0,
   "h20": 2500.0,
-  "h50": 1675.0627500000003,
+  "h50": 642.9717420845036,
   "h100": 1536.0570319137578
  },
  "positions": [
@@ -48,21 +48,23 @@
    "max_days": 100,
    "days_held": 3,
    "reason": "6 aylık getiri %35.7, BIST 30'da 2. sırada"
-  }
- ],
- "pending": [
+  },
   {
+   "id": "82bab9e3",
    "ticker": "VAKBN",
    "strategy": "h50",
-   "price": 33.68000030517578,
-   "stop": 29.39,
+   "entry_date": "2026-10-08",
+   "entry_price": 33.2933,
+   "lots": 31,
+   "cost": 1032.09,
+   "stop": 29.0,
    "target": null,
    "max_days": 50,
-   "score": 9.28,
-   "reason": "3 aylık getiri %9.3, BIST 30'da 4. sırada",
-   "signal_date": "2026-10-07"
+   "days_held": 0,
+   "reason": "3 aylık getiri %9.3, BIST 30'da 4. sırada"
   }
  ],
+ "pending": [],
  "closed": [
   {
    "id": "2f346326",
