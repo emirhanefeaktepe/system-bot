@@ -18,7 +18,7 @@
    "stop": 335.34,
    "target": null,
    "max_days": 50,
-   "days_held": 4,
+   "days_held": 5,
    "reason": "3 aylık getiri %52.4, BIST 30'da 1. sırada"
   },
   {
@@ -32,7 +32,7 @@
    "stop": 318.65,
    "target": null,
    "max_days": 100,
-   "days_held": 4,
+   "days_held": 5,
    "reason": "6 aylık getiri %47.7, BIST 30'da 1. sırada"
   },
   {
@@ -46,7 +46,7 @@
    "stop": 36.46,
    "target": null,
    "max_days": 100,
-   "days_held": 4,
+   "days_held": 5,
    "reason": "6 aylık getiri %35.7, BIST 30'da 2. sırada"
   },
   {
@@ -60,11 +60,23 @@
    "stop": 29.0,
    "target": null,
    "max_days": 50,
-   "days_held": 1,
+   "days_held": 2,
    "reason": "3 aylık getiri %9.3, BIST 30'da 4. sırada"
   }
  ],
- "pending": [],
+ "pending": [
+  {
+   "ticker": "VAKBN",
+   "strategy": "h20",
+   "price": 33.900001525878906,
+   "stop": 30.53,
+   "target": 39.29,
+   "max_days": 20,
+   "score": 2.783,
+   "reason": "Yükseliş trendinde 20 günlük ortalamadan destek aldı",
+   "signal_date": "2026-10-09"
+  }
+ ],
  "closed": [
   {
    "id": "2f346326",
@@ -131,6 +143,15 @@
    "h50": 2470.93,
    "h100": 2487.57,
    "bench": 15137.5703125
+  },
+  {
+   "date": "2026-10-09",
+   "total": 9949.24,
+   "h10": 2500.0,
+   "h20": 2500.0,
+   "h50": 2466.37,
+   "h100": 2482.87,
+   "bench": 15145.26953125
   }
  ],
  "alerts": {},
@@ -140,6 +161,6 @@
    "close": 15205.3896484375
   },
   "start_date": "2026-10-02",
-  "last_eod": "2026-10-08"
+  "last_eod": "2026-10-09"
  }
 }
