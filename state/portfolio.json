@@ -2,7 +2,7 @@
  "capital": 10000.0,
  "cash": {
   "h10": 2500.0,
-  "h20": 1307.4085679244995,
+  "h20": 216.63891625785823,
   "h50": 642.9717420845036,
   "h100": 1536.0570319137578
  },
@@ -76,21 +76,23 @@
    "max_days": 20,
    "days_held": 2,
    "reason": "Yükseliş trendinde 20 günlük ortalamadan destek aldı"
-  }
- ],
- "pending": [
+  },
   {
+   "id": "747915a2",
    "ticker": "PETKM",
    "strategy": "h20",
-   "price": 20.8799991607666,
-   "stop": 18.25,
-   "target": 25.09,
+   "entry_date": "2026-10-14",
+   "entry_price": 20.5806,
+   "lots": 53,
+   "cost": 1090.77,
+   "stop": 17.95,
+   "target": 24.79,
    "max_days": 20,
-   "score": 0.297,
-   "reason": "Yükseliş trendinde 20 günlük ortalamadan destek aldı",
-   "signal_date": "2026-10-13"
+   "days_held": 0,
+   "reason": "Yükseliş trendinde 20 günlük ortalamadan destek aldı"
   }
  ],
+ "pending": [],
  "closed": [
   {
    "id": "2f346326",
