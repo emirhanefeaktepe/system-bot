@@ -3,24 +3,10 @@
  "cash": {
   "h10": 2500.0,
   "h20": 216.63891625785823,
-  "h50": 642.9717420845036,
+  "h50": 1411.2027420845036,
   "h100": 1536.0570319137578
  },
  "positions": [
-  {
-   "id": "8f9e5970",
-   "ticker": "TUPRS",
-   "strategy": "h50",
-   "entry_date": "2026-10-05",
-   "entry_price": 385.385,
-   "lots": 2,
-   "cost": 770.77,
-   "stop": 335.34,
-   "target": null,
-   "max_days": 50,
-   "days_held": 8,
-   "reason": "3 aylık getiri %52.4, BIST 30'da 1. sırada"
-  },
   {
    "id": "70b1fc62",
    "ticker": "TUPRS",
@@ -32,7 +18,7 @@
    "stop": 318.65,
    "target": null,
    "max_days": 100,
-   "days_held": 8,
+   "days_held": 9,
    "reason": "6 aylık getiri %47.7, BIST 30'da 1. sırada"
   },
   {
@@ -46,7 +32,7 @@
    "stop": 36.46,
    "target": null,
    "max_days": 100,
-   "days_held": 8,
+   "days_held": 9,
    "reason": "6 aylık getiri %35.7, BIST 30'da 2. sırada"
   },
   {
@@ -60,7 +46,7 @@
    "stop": 29.0,
    "target": null,
    "max_days": 50,
-   "days_held": 5,
+   "days_held": 6,
    "reason": "3 aylık getiri %9.3, BIST 30'da 4. sırada"
   },
   {
@@ -74,7 +60,7 @@
    "stop": 30.7,
    "target": 39.46,
    "max_days": 20,
-   "days_held": 3,
+   "days_held": 4,
    "reason": "Yükseliş trendinde 20 günlük ortalamadan destek aldı"
   },
   {
@@ -88,7 +74,7 @@
    "stop": 17.95,
    "target": 24.79,
    "max_days": 20,
-   "days_held": 1,
+   "days_held": 2,
    "reason": "Yükseliş trendinde 20 günlük ortalamadan destek aldı"
   }
  ],
@@ -112,6 +98,25 @@
    "exit_reason": "Fiyat 50 günlük ortalamanın altına indi",
    "pnl": -54.16,
    "pnl_pct": -4.38
+  },
+  {
+   "id": "8f9e5970",
+   "ticker": "TUPRS",
+   "strategy": "h50",
+   "entry_date": "2026-10-05",
+   "entry_price": 385.385,
+   "lots": 2,
+   "cost": 770.77,
+   "stop": 335.34,
+   "target": null,
+   "max_days": 50,
+   "days_held": 9,
+   "reason": "3 aylık getiri %52.4, BIST 30'da 1. sırada",
+   "exit_date": "2026-10-15",
+   "exit_price": 384.1155,
+   "exit_reason": "Fiyat 50 günlük ortalamanın altına indi",
+   "pnl": -2.54,
+   "pnl_pct": -0.33
   }
  ],
  "history": [
@@ -195,6 +200,15 @@
    "h50": 2486.41,
    "h100": 2488.14,
    "bench": 15047.8701171875
+  },
+  {
+   "date": "2026-10-15",
+   "total": 9934.18,
+   "h10": 2500.0,
+   "h20": 2487.46,
+   "h50": 2467.68,
+   "h100": 2479.04,
+   "bench": 14986.7802734375
   }
  ],
  "alerts": {},
@@ -204,6 +218,6 @@
    "close": 15205.3896484375
   },
   "start_date": "2026-10-02",
-  "last_eod": "2026-10-14"
+  "last_eod": "2026-10-15"
  }
 }
