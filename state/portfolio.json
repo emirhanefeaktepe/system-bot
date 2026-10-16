@@ -3,8 +3,8 @@
  "cash": {
   "h10": 2500.0,
   "h20": 216.63891625785823,
-  "h50": 1411.2027420845036,
-  "h100": 1536.0570319137578
+  "h50": 2428.844100986481,
+  "h100": 2071.9006301155096
  },
  "positions": [
   {
@@ -18,36 +18,8 @@
    "stop": 318.65,
    "target": null,
    "max_days": 100,
-   "days_held": 9,
+   "days_held": 10,
    "reason": "6 aylık getiri %47.7, BIST 30'da 1. sırada"
-  },
-  {
-   "id": "4b175d8f",
-   "ticker": "KRDMD",
-   "strategy": "h100",
-   "entry_date": "2026-10-05",
-   "entry_price": 44.5045,
-   "lots": 13,
-   "cost": 578.56,
-   "stop": 36.46,
-   "target": null,
-   "max_days": 100,
-   "days_held": 9,
-   "reason": "6 aylık getiri %35.7, BIST 30'da 2. sırada"
-  },
-  {
-   "id": "82bab9e3",
-   "ticker": "VAKBN",
-   "strategy": "h50",
-   "entry_date": "2026-10-08",
-   "entry_price": 33.2933,
-   "lots": 31,
-   "cost": 1032.09,
-   "stop": 29.0,
-   "target": null,
-   "max_days": 50,
-   "days_held": 6,
-   "reason": "3 aylık getiri %9.3, BIST 30'da 4. sırada"
   },
   {
    "id": "f44c5914",
@@ -60,7 +32,7 @@
    "stop": 30.7,
    "target": 39.46,
    "max_days": 20,
-   "days_held": 4,
+   "days_held": 5,
    "reason": "Yükseliş trendinde 20 günlük ortalamadan destek aldı"
   },
   {
@@ -74,11 +46,23 @@
    "stop": 17.95,
    "target": 24.79,
    "max_days": 20,
-   "days_held": 2,
+   "days_held": 3,
    "reason": "Yükseliş trendinde 20 günlük ortalamadan destek aldı"
   }
  ],
- "pending": [],
+ "pending": [
+  {
+   "ticker": "KRDMD",
+   "strategy": "h100",
+   "price": 41.2599983215332,
+   "stop": 34.2,
+   "target": null,
+   "max_days": 100,
+   "score": 16.554,
+   "reason": "6 aylık getiri %16.6, BIST 30'da 2. sırada",
+   "signal_date": "2026-10-16"
+  }
+ ],
  "closed": [
   {
    "id": "2f346326",
@@ -117,6 +101,44 @@
    "exit_reason": "Fiyat 50 günlük ortalamanın altına indi",
    "pnl": -2.54,
    "pnl_pct": -0.33
+  },
+  {
+   "id": "4b175d8f",
+   "ticker": "KRDMD",
+   "strategy": "h100",
+   "entry_date": "2026-10-05",
+   "entry_price": 44.5045,
+   "lots": 13,
+   "cost": 578.56,
+   "stop": 36.46,
+   "target": null,
+   "max_days": 100,
+   "days_held": 10,
+   "reason": "6 aylık getiri %35.7, BIST 30'da 2. sırada",
+   "exit_date": "2026-10-16",
+   "exit_price": 41.2187,
+   "exit_reason": "Fiyat 100 günlük ortalamanın altına indi",
+   "pnl": -42.72,
+   "pnl_pct": -7.38
+  },
+  {
+   "id": "82bab9e3",
+   "ticker": "VAKBN",
+   "strategy": "h50",
+   "entry_date": "2026-10-08",
+   "entry_price": 33.2933,
+   "lots": 31,
+   "cost": 1032.09,
+   "stop": 29.0,
+   "target": null,
+   "max_days": 50,
+   "days_held": 7,
+   "reason": "3 aylık getiri %9.3, BIST 30'da 4. sırada",
+   "exit_date": "2026-10-16",
+   "exit_price": 32.8271,
+   "exit_reason": "Fiyat 50 günlük ortalamanın altına indi",
+   "pnl": -14.45,
+   "pnl_pct": -1.4
   }
  ],
  "history": [
@@ -209,19 +231,24 @@
    "h50": 2467.68,
    "h100": 2479.04,
    "bench": 14986.7802734375
+  },
+  {
+   "date": "2026-10-16",
+   "total": 9787.61,
+   "h10": 2500.0,
+   "h20": 2411.37,
+   "h50": 2428.84,
+   "h100": 2447.4,
+   "bench": 14558.4296875
   }
  ],
- "alerts": {
-  "KRDMD:-": "2026-10-16",
-  "TUPRS:-": "2026-10-16",
-  "PETKM:-": "2026-10-16"
- },
+ "alerts": {},
  "meta": {
   "bench_start": {
    "date": "2026-10-02",
    "close": 15205.3896484375
   },
   "start_date": "2026-10-02",
-  "last_eod": "2026-10-15"
+  "last_eod": "2026-10-16"
  }
 }
