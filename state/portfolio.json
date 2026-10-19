@@ -4,7 +4,7 @@
   "h10": 2500.0,
   "h20": 216.63891625785823,
   "h50": 2428.844100986481,
-  "h100": 2071.9006301155096
+  "h100": 1408.838205677033
  },
  "positions": [
   {
@@ -48,21 +48,23 @@
    "max_days": 20,
    "days_held": 3,
    "reason": "Yükseliş trendinde 20 günlük ortalamadan destek aldı"
-  }
- ],
- "pending": [
+  },
   {
+   "id": "2dc44908",
    "ticker": "KRDMD",
    "strategy": "h100",
-   "price": 41.2599983215332,
-   "stop": 34.2,
+   "entry_date": "2026-10-19",
+   "entry_price": 41.4414,
+   "lots": 16,
+   "cost": 663.06,
+   "stop": 34.38,
    "target": null,
    "max_days": 100,
-   "score": 16.554,
-   "reason": "6 aylık getiri %16.6, BIST 30'da 2. sırada",
-   "signal_date": "2026-10-16"
+   "days_held": 0,
+   "reason": "6 aylık getiri %16.6, BIST 30'da 2. sırada"
   }
  ],
+ "pending": [],
  "closed": [
   {
    "id": "2f346326",
