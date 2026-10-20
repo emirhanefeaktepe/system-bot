@@ -4,7 +4,7 @@
   "h10": 2500.0,
   "h20": 216.63891625785823,
   "h50": 2428.844100986481,
-  "h100": 2064.1822056770334
+  "h100": 1109.5885739250193
  },
  "positions": [
   {
@@ -48,21 +48,23 @@
    "max_days": 20,
    "days_held": 4,
    "reason": "Yükseliş trendinde 20 günlük ortalamadan destek aldı"
-  }
- ],
- "pending": [
+  },
   {
+   "id": "492581d4",
    "ticker": "EREGL",
    "strategy": "h100",
-   "price": 35.619998931884766,
-   "stop": 31.03,
+   "entry_date": "2026-10-20",
+   "entry_price": 35.3553,
+   "lots": 27,
+   "cost": 954.59,
+   "stop": 30.77,
    "target": null,
    "max_days": 100,
-   "score": 12.579,
-   "reason": "6 aylık getiri %12.6, BIST 30'da 2. sırada",
-   "signal_date": "2026-10-19"
+   "days_held": 0,
+   "reason": "6 aylık getiri %12.6, BIST 30'da 2. sırada"
   }
  ],
+ "pending": [],
  "closed": [
   {
    "id": "2f346326",
