@@ -4,7 +4,7 @@
   "h10": 2500.0,
   "h20": 216.63891625785823,
   "h50": 2428.844100986481,
-  "h100": 1109.5885739250193
+  "h100": 2112.4447221565256
  },
  "positions": [
   {
@@ -18,7 +18,7 @@
    "stop": 318.65,
    "target": null,
    "max_days": 100,
-   "days_held": 11,
+   "days_held": 12,
    "reason": "6 aylık getiri %47.7, BIST 30'da 1. sırada"
   },
   {
@@ -32,7 +32,7 @@
    "stop": 30.7,
    "target": 39.46,
    "max_days": 20,
-   "days_held": 6,
+   "days_held": 7,
    "reason": "Yükseliş trendinde 20 günlük ortalamadan destek aldı"
   },
   {
@@ -46,25 +46,45 @@
    "stop": 17.95,
    "target": 24.79,
    "max_days": 20,
-   "days_held": 4,
+   "days_held": 5,
    "reason": "Yükseliş trendinde 20 günlük ortalamadan destek aldı"
-  },
-  {
-   "id": "492581d4",
-   "ticker": "EREGL",
-   "strategy": "h100",
-   "entry_date": "2026-10-20",
-   "entry_price": 35.3553,
-   "lots": 27,
-   "cost": 954.59,
-   "stop": 30.77,
-   "target": null,
-   "max_days": 100,
-   "days_held": 0,
-   "reason": "6 aylık getiri %12.6, BIST 30'da 2. sırada"
   }
  ],
- "pending": [],
+ "pending": [
+  {
+   "ticker": "TAVHL",
+   "strategy": "h10",
+   "price": 286.25,
+   "stop": 268.44,
+   "target": 312.97,
+   "max_days": 10,
+   "score": 1.548,
+   "reason": "20 günlük zirve 284.00 kırıldı, hacim 1.5 kat",
+   "signal_date": "2026-10-20"
+  },
+  {
+   "ticker": "VAKBN",
+   "strategy": "h50",
+   "price": 33.20000076293945,
+   "stop": 29.72,
+   "target": null,
+   "max_days": 50,
+   "score": 9.067,
+   "reason": "3 aylık getiri %9.1, BIST 30'da 4. sırada",
+   "signal_date": "2026-10-20"
+  },
+  {
+   "ticker": "EREGL",
+   "strategy": "h100",
+   "price": 37.18000030517578,
+   "stop": 32.36,
+   "target": null,
+   "max_days": 100,
+   "score": 20.324,
+   "reason": "6 aylık getiri %20.3, BIST 30'da 2. sırada",
+   "signal_date": "2026-10-20"
+  }
+ ],
  "closed": [
   {
    "id": "2f346326",
@@ -160,6 +180,25 @@
    "exit_reason": "Fiyat 100 günlük ortalamanın altına indi",
    "pnl": -7.72,
    "pnl_pct": -1.16
+  },
+  {
+   "id": "492581d4",
+   "ticker": "EREGL",
+   "strategy": "h100",
+   "entry_date": "2026-10-20",
+   "entry_price": 35.3553,
+   "lots": 27,
+   "cost": 954.59,
+   "stop": 30.77,
+   "target": null,
+   "max_days": 100,
+   "days_held": 1,
+   "reason": "6 aylık getiri %12.6, BIST 30'da 2. sırada",
+   "exit_date": "2026-10-20",
+   "exit_price": 37.1428,
+   "exit_reason": "Fiyat 100 günlük ortalamanın altına indi",
+   "pnl": 48.27,
+   "pnl_pct": 5.06
   }
  ],
  "history": [
@@ -270,17 +309,24 @@
    "h50": 2428.84,
    "h100": 2420.93,
    "bench": 14221.6201171875
+  },
+  {
+   "date": "2026-10-20",
+   "total": 9820.73,
+   "h10": 2500.0,
+   "h20": 2417.44,
+   "h50": 2428.84,
+   "h100": 2474.44,
+   "bench": 14676.5302734375
   }
  ],
- "alerts": {
-  "EREGL:+": "2026-10-20"
- },
+ "alerts": {},
  "meta": {
   "bench_start": {
    "date": "2026-10-02",
    "close": 15205.3896484375
   },
   "start_date": "2026-10-02",
-  "last_eod": "2026-10-19"
+  "last_eod": "2026-10-20"
  }
 }
