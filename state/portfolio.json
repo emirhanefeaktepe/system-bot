@@ -1,7 +1,7 @@
 {
  "capital": 10000.0,
  "cash": {
-  "h10": 1359.861,
+  "h10": 2427.67212,
   "h20": 216.63891625785823,
   "h50": 2397.8544117317206,
   "h100": 1162.4596897850047
@@ -48,20 +48,6 @@
    "max_days": 20,
    "days_held": 6,
    "reason": "Yükseliş trendinde 20 günlük ortalamadan destek aldı"
-  },
-  {
-   "id": "c9ed4178",
-   "ticker": "TAVHL",
-   "strategy": "h10",
-   "entry_date": "2026-10-21",
-   "entry_price": 285.0347,
-   "lots": 4,
-   "cost": 1140.14,
-   "stop": 267.22,
-   "target": 311.75,
-   "max_days": 10,
-   "days_held": 1,
-   "reason": "20 günlük zirve 284.00 kırıldı, hacim 1.5 kat"
   },
   {
    "id": "65b58a6f",
@@ -231,6 +217,25 @@
    "exit_reason": "Fiyat 100 günlük ortalamanın altına indi",
    "pnl": -2.12,
    "pnl_pct": -0.2
+  },
+  {
+   "id": "c9ed4178",
+   "ticker": "TAVHL",
+   "strategy": "h10",
+   "entry_date": "2026-10-21",
+   "entry_price": 285.0347,
+   "lots": 4,
+   "cost": 1140.14,
+   "stop": 267.22,
+   "target": 311.75,
+   "max_days": 10,
+   "days_held": 1,
+   "reason": "20 günlük zirve 284.00 kırıldı, hacim 1.5 kat",
+   "exit_date": "2026-10-22",
+   "exit_price": 266.9528,
+   "exit_reason": "Zarar durdur (stop)",
+   "pnl": -72.33,
+   "pnl_pct": -6.34
   }
  ],
  "history": [
