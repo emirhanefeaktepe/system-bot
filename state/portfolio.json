@@ -4,7 +4,7 @@
   "h10": 2427.67212,
   "h20": 2240.4630662578584,
   "h50": 2397.8544117317206,
-  "h100": 1232.0257331886305
+  "h100": 2080.376499652864
  },
  "positions": [
   {
@@ -18,25 +18,23 @@
    "stop": 318.65,
    "target": null,
    "max_days": 100,
-   "days_held": 14,
+   "days_held": 15,
    "reason": "6 aylık getiri %47.7, BIST 30'da 1. sırada"
-  },
-  {
-   "id": "6fbc88d0",
-   "ticker": "KRDMD",
-   "strategy": "h100",
-   "entry_date": "2026-10-23",
-   "entry_price": 38.2782,
-   "lots": 22,
-   "cost": 842.12,
-   "stop": 31.17,
-   "target": null,
-   "max_days": 100,
-   "days_held": 0,
-   "reason": "6 aylık getiri %8.7, BIST 30'da 2. sırada"
   }
  ],
- "pending": [],
+ "pending": [
+  {
+   "ticker": "KRDMD",
+   "strategy": "h100",
+   "price": 38.599998474121094,
+   "stop": 31.25,
+   "target": null,
+   "max_days": 100,
+   "score": 6.925,
+   "reason": "6 aylık getiri %6.9, BIST 30'da 2. sırada",
+   "signal_date": "2026-10-23"
+  }
+ ],
  "closed": [
   {
    "id": "2f346326",
@@ -265,6 +263,25 @@
    "exit_reason": "Zarar durdur (stop)",
    "pnl": -140.37,
    "pnl_pct": -12.87
+  },
+  {
+   "id": "6fbc88d0",
+   "ticker": "KRDMD",
+   "strategy": "h100",
+   "entry_date": "2026-10-23",
+   "entry_price": 38.2782,
+   "lots": 22,
+   "cost": 842.12,
+   "stop": 31.17,
+   "target": null,
+   "max_days": 100,
+   "days_held": 1,
+   "reason": "6 aylık getiri %8.7, BIST 30'da 2. sırada",
+   "exit_date": "2026-10-23",
+   "exit_price": 38.5614,
+   "exit_reason": "Fiyat 100 günlük ortalamanın altına indi",
+   "pnl": 6.23,
+   "pnl_pct": 0.74
   }
  ],
  "history": [
@@ -402,17 +419,24 @@
    "h50": 2397.85,
    "h100": 2426.4,
    "bench": 14010.8603515625
+  },
+  {
+   "date": "2026-10-23",
+   "total": 9507.12,
+   "h10": 2427.67,
+   "h20": 2240.46,
+   "h50": 2397.85,
+   "h100": 2441.13,
+   "bench": 13874.240234375
   }
  ],
- "alerts": {
-  "KRDMD:-": "2026-10-23"
- },
+ "alerts": {},
  "meta": {
   "bench_start": {
    "date": "2026-10-02",
    "close": 15205.3896484375
   },
   "start_date": "2026-10-02",
-  "last_eod": "2026-10-22"
+  "last_eod": "2026-10-23"
  }
 }
