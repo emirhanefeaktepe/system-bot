@@ -2,9 +2,9 @@
  "capital": 10000.0,
  "cash": {
   "h10": 2427.67212,
-  "h20": 216.63891625785823,
+  "h20": 1290.0644162578583,
   "h50": 2397.8544117317206,
-  "h100": 2074.147050151826
+  "h100": 1232.0257331886305
  },
  "positions": [
   {
@@ -22,20 +22,6 @@
    "reason": "6 aylık getiri %47.7, BIST 30'da 1. sırada"
   },
   {
-   "id": "f44c5914",
-   "ticker": "VAKBN",
-   "strategy": "h20",
-   "entry_date": "2026-10-12",
-   "entry_price": 34.074,
-   "lots": 35,
-   "cost": 1192.59,
-   "stop": 30.7,
-   "target": 39.46,
-   "max_days": 20,
-   "days_held": 9,
-   "reason": "Yükseliş trendinde 20 günlük ortalamadan destek aldı"
-  },
-  {
    "id": "747915a2",
    "ticker": "PETKM",
    "strategy": "h20",
@@ -48,21 +34,23 @@
    "max_days": 20,
    "days_held": 7,
    "reason": "Yükseliş trendinde 20 günlük ortalamadan destek aldı"
-  }
- ],
- "pending": [
+  },
   {
+   "id": "6fbc88d0",
    "ticker": "KRDMD",
    "strategy": "h100",
-   "price": 39.880001068115234,
-   "stop": 32.77,
+   "entry_date": "2026-10-23",
+   "entry_price": 38.2782,
+   "lots": 22,
+   "cost": 842.12,
+   "stop": 31.17,
    "target": null,
    "max_days": 100,
-   "score": 8.665,
-   "reason": "6 aylık getiri %8.7, BIST 30'da 2. sırada",
-   "signal_date": "2026-10-22"
+   "days_held": 0,
+   "reason": "6 aylık getiri %8.7, BIST 30'da 2. sırada"
   }
  ],
+ "pending": [],
  "closed": [
   {
    "id": "2f346326",
@@ -253,6 +241,25 @@
    "exit_reason": "Fiyat 100 günlük ortalamanın altına indi",
    "pnl": -36.18,
    "pnl_pct": -3.82
+  },
+  {
+   "id": "f44c5914",
+   "ticker": "VAKBN",
+   "strategy": "h20",
+   "entry_date": "2026-10-12",
+   "entry_price": 34.074,
+   "lots": 35,
+   "cost": 1192.59,
+   "stop": 30.7,
+   "target": 39.46,
+   "max_days": 20,
+   "days_held": 9,
+   "reason": "Yükseliş trendinde 20 günlük ortalamadan destek aldı",
+   "exit_date": "2026-10-23",
+   "exit_price": 30.6693,
+   "exit_reason": "Zarar durdur (stop)",
+   "pnl": -119.16,
+   "pnl_pct": -9.99
   }
  ],
  "history": [
@@ -392,7 +399,9 @@
    "bench": 14010.8603515625
   }
  ],
- "alerts": {},
+ "alerts": {
+  "KRDMD:-": "2026-10-23"
+ },
  "meta": {
   "bench_start": {
    "date": "2026-10-02",
